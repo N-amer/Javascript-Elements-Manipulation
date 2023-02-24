@@ -74,10 +74,10 @@ const gemeente = {
     ],
 };
 
-for (let i = 1; i < gemeente.steden.length + 1; i++) {
+for (let i = 1; i < (gemeente.steden.length + 1); i++) {
     let naamReversed = gemeente.steden[i].burgemeester.naam;
-    let fixedNaam = namen.split('').reverse().join('');
-    let burgemeesterElement = document.getElementById(`burgemeester${i + 1}`);
+    let fixedNaam = naamReversed.split('').reverse().join('');
+    let burgemeesterElement = document.getElementById(`burgemeester${i}`);
     burgemeesterElement.innerHTML = fixedNaam;
 
     document.getElementById("naam" + i).innerHTML = gemeente.steden[i].naam;
